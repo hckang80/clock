@@ -77,7 +77,6 @@ body {
   top: 5px;
   border-width: .5px;
   border-color: #c92a2a;
-  transform: rotate(10deg) translateX(-50%);
 }
 .clock-wrap .the-minute-hand {
   top: 40px;
