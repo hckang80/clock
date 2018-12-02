@@ -5,6 +5,8 @@ html {
   font-size: 10px;
 }
 body {
+  margin: 0;
+  padding: 10px;
   background: #212529;
 }
 *, *::before, *::after {
@@ -12,7 +14,10 @@ body {
 }
 
 .clock-wrap {
+  max-width: 500px;
+  min-width: 300px;
   height: 100%;
+  margin: 0 auto;
   font-size: 0;
   text-align: center;
 }
@@ -27,8 +32,8 @@ body {
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  padding: 0 0 100%;
   border-radius: 100%;
   background: #adb5bd;
   opacity: 0;
@@ -45,6 +50,13 @@ body {
 .clock-wrap .body::after {
   height: 10px;
   transform: translateX(-50%);
+}
+.clock-wrap .inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 .clock-wrap .inner::before,
 .clock-wrap .inner::after {
@@ -75,19 +87,19 @@ body {
   transform-origin: 0 100%;
 }
 .clock-wrap .the-second-hand {
-  top: 5px;
+  top: 1%;
   border-width: .5px;
   border-color: #c92a2a;
 }
 .clock-wrap .the-minute-hand {
-  top: 40px;
+  top: 5%;
   border-width: 2px;
   border-color: #212529;
   border-radius: 2px;
   transform: rotate(40deg) translateX(-50%);
 }
 .clock-wrap .the-hour-hand {
-  top: 80px;
+  top: 25%;
   border-width: 2px;
   border-color: #212529;
   border-radius: 2px;
