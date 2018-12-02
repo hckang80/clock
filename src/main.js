@@ -1,4 +1,5 @@
 
+const clockBody = document.querySelector('.clock-wrap .body')
 const theHourHand = document.querySelector('.the-hour-hand')
 const theMinuteHand = document.querySelector('.the-minute-hand')
 const theSecondHand = document.querySelector('.the-second-hand')
@@ -12,6 +13,9 @@ const handMovement = () => {
   theMinuteHand.style.transform = `rotate(${minutes * 6}deg) translateX(-50%)`
   theSecondHand.style.transform = `rotate(${seconds * 6}deg) translateX(-50%)`
 }
+
+handMovement()
+clockBody.style.opacity = 1
 
 setInterval(() => {
   handMovement()

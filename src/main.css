@@ -31,6 +31,7 @@ body {
   height: 300px;
   border-radius: 100%;
   background: #adb5bd;
+  opacity: 0;
 }
 .clock-wrap .body::before,
 .clock-wrap .body::after,
